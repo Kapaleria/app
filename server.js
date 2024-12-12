@@ -1,9 +1,18 @@
 const express = require('express')
 require('dotenv/config')
 const mongoose = require('mongoose')
+const bodyParser=require('body-parser')
+const cors = require('cors')
+
+const routes = require('./routes')
 
 // creating an express app
 const app = express()
+
+//MIDDLEWARE
+app.use(cors())
+app.use(bodyParser.json())
+app.use('/api', routes)
 
 //HTTP - Hyper Text Markup Protocol
 // GET method
