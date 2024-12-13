@@ -3,7 +3,6 @@ require('dotenv/config')
 const mongoose = require('mongoose')
 const bodyParser=require('body-parser')
 const cors = require('cors')
-
 const routes = require('./routes')
 
 // creating an express app
