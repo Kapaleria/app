@@ -29,4 +29,33 @@ router.post('/sendData', async(req,res)=>{
         }
 })
 
+//GET method - reads data from the database
+router.get('/getData', async(req,res)=>{
+    try{
+        const allData = await Patient.find()
+        res.json(allData)
+    }
+    catch(err){
+        //if unsuccessful
+            res.status(500).json({msg:err})
+    }
+})
+
+//GET method - get a specific entry of data
+router.get('/getData/:patientID', async(req,res)=>{
+    try{
+        const onePatientData = await Patient.findById(req.params.patientID)
+        res.json(onePatientData)
+    }
+    catch(err){
+        //if unsuccessful
+            res.status(500).json({msg:err})
+    }
+})
+
+//DELETE method
+
+
+//PATCH method
+
 module.exports=router
