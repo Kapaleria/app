@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="patientForm.css">
+    <title>Patient Form</title>
+</head>
+<body>
+    <div id="form">
+        <p>Fill in patient's details</p>
+    <form action="#" method="POST" >
+
+        <div class="section">
+            <label for="patientName">Patient Name <span style="color: red;"> *</span> </label>
+            <input type="text" name="patientName" id="patientName" class="patientInput" placeholder="Enter the patient's name" required>
+        </div>
+        <div class="section">
+            <label for="patientName">Patient Age <span style="color: red;"> *</span> </label>
+            <input type="number" name="patientAge" id="patientAge" class="patientInput" min="0" placeholder="Enter the patient's age" required>
+        </div>
+        <div class="section">
+            <label for="patientName">Patient Location  </label>
+            <input type="text" name="patientLocation" id="patientLocation" class="patientInput" placeholder="Enter the patient's location">
+        </div>
+        <div class="section">
+            <label for="patientName">Patient Complaint <span style="color: red;"> *</span> </label>
+            <input type="text" name="patientComplaint" id="patientComplaint" class="patientInput" style="height: 30px;" placeholder="Enter the patient's complaint" required>
+        </div>
+            <div  id="button">
+                <button type="submit">Send</button>
+            </div>
+    </form>
+        </div>
+</body>
+</html>
